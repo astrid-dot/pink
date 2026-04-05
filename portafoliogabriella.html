@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+        <link rel="shortcut icon" href="imagenes/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="imagenes/favicon.ico" type="image/x-icon">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Portafolio</title>
+        <link href="portafoliog.css" rel="stylesheet" type="text/css">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body style="background-color: hotpink; background-image: url(imagenes/fondog.svg); background-size: cover;">
+<div class="todo">
+<header>
+  <h1>Portafolio</h1>
+  <p>Un website creado por Gabriella y Astrid</p>
+</header>
+
+<nav>
+  <div class="subnav">
+        <a class="subnavbtn" href="index.html">Inicio<i class="fa fa-caret-down"></i></a>
+    </div>
+    
+  <div class="subnav">
+    <a class="subnavbtn">Nosotras<i class="fa fa-caret-down"></i></a>
+    <div class="subnav-content">
+      <a href="sobregabriella.html">Sobre Gabriella</a>
+      <a href="sobreastrid.html">Sobre Astrid</a>
+    </div>
+  </div>
+
+  <div class="subnav">
+    <a class="subnavbtn">Portafolios<i class="fa fa-caret-down"></i></a>
+    <div class="subnav-content">
+      <a href="portafoliogabriella.html">Portafolio Gabriella</a>
+      <a href="portafolioastrid.html">Portafolio Astrid</a>
+    </div>
+  </div>
+    
+    <div class="subnav">
+       <a class="subnavbtn" href="contacto.html">Contactos<i class="fa fa-caret-down"></i></a>
+    </div>
+</nav>
+    
+
+<div class="about">
+    <h1>Portafolio</h1>
+    <div class="row">
+                <div class="column">
+                    <img src="imagenes/16odsa.jpg" style="width:100%" onclick="openModal();currentSlide(1)" alt="Cartel 1 del ODS Número 16: Paz, justicia e instituciones sólidas" class="hover-shadow cursor">
+                    <img src="imagenes/despina.jpg" style="width:100%" onclick="openModal();currentSlide(2)" alt="Cartel de Despina, del libro Ciudades Invisibles de Italo Calvino" class="hover-shadow cursor">
+                    <img src="imagenes/tgcf1.jpg" style="width:100%" onclick="openModal();currentSlide(3)" alt="Diseño de la portada del libro La bendición del oficial del cielo versión 1" class="hover-shadow cursor">
+                </div>
+                <div class="column">
+                    <img src="imagenes/linea2.jpg" style="width:100%" onclick="openModal();currentSlide(4)" alt="Rediseño del ícono de 6 estaciones de la línea 2 del metro de la CDMX" class="hover-shadow cursor">
+                    <img src="imagenes/ethel.jpg" style="width:100%" onclick="openModal();currentSlide(5)" alt="Diseño de la tipografía Ethel inspirado en el trabajo de Sindy Ethel" class="hover-shadow cursor">
+                    <img src="imagenes/libroportada.jpg" style="width:100%" onclick="openModal();currentSlide(6)" alt="Forros de bitácora personal" class="hover-shadow cursor">
+                    <img src="imagenes/rebas.jpg" style="width:100%" onclick="openModal();currentSlide(7)" alt="Rediseño del empaque de Rebanadas Bimbo" class="hover-shadow cursor">
+                    <img src="imagenes/empaque.jpg" style="width:100%" onclick="openModal();currentSlide(8)" alt="Diseño de empaque de perfume LILIUM CEERNUM" class="hover-shadow cursor">
+                </div>  
+                <div class="column">
+                    <img src="imagenes/16odsb.jpg" style="width:100%" onclick="openModal();currentSlide(9)" alt="Cartel 2 del ODS Número 16: Paz, justicia e instituciones sólidas" class="hover-shadow cursor">
+                    <img src="imagenes/medusas.jpg" style="width:100%" onclick="openModal();currentSlide(10)" alt="Ilustración de medusas con técnica de tinta china" class="hover-shadow cursor">
+                    <img src="imagenes/tgcf2.jpg" style="width:100%" onclick="currentSlide(11)" alt="Diseño de la portada del libro La bendición del oficial del cielo versión 2" class="hover-shadow cursor">
+                </div>
+    </div>
+</div>
+   
+<div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <div class="mySlides"><img src="imagenes/16odsa.jpg" style="width:100%" alt="Cartel 1 del ODS Número 16: Paz, justicia e instituciones sólidas"></div>
+            <div class="mySlides"><img src="imagenes/despina.jpg" style="width:100%" alt="Cartel de Despina, del libro Ciudades Invisibles de Italo Calvino"></div>
+            <div class="mySlides"><img src="imagenes/tgcf1.jpg" style="width:90%" alt="Diseño de la portada del libro La bendición del oficial del cielo versión 1"></div>
+            <div class="mySlides"><img src="imagenes/linea2.jpg" style="width:100%" alt="Rediseño del ícono de 6 estaciones de la línea 2 del metro de la CDMX"></div>
+            <div class="mySlides"><img src="imagenes/ethel.jpg" style="width:90%" alt="Diseño de la tipografía Ethel inspirado en el trabajo de Sindy Ethel"></div>
+            <div class="mySlides"><img src="imagenes/libroportada.jpg" style="width:100%" alt="Forros de bitácora personal"></div>
+            <div class="mySlides"><img src="imagenes/rebas.jpg" style="width:100%" alt="Rediseño del empaque de Rebanadas Bimbo"></div>
+            <div class="mySlides"><img src="imagenes/empaque.jpg" style="width:100%" alt="Diseño de empaque de perfume LILIUM CEERNUM"></div>
+            <div class="mySlides"><img src="imagenes/16odsb.jpg" style="width:100%" alt="Cartel 2 del ODS Número 16: Paz, justicia e instituciones sólidas"></div>
+            <div class="mySlides"><img src="imagenes/medusas.jpg" style="width:100%" alt="Ilustración de medusas con técnica de tinta china"></div>
+            <div class="mySlides"><img src="imagenes/tgcf2.jpg" style="width:90%" alt="Diseño de la portada del libro La bendición del oficial del cielo versión 2"></div>
+                
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+    </div>
+</div>
+    
+    <div id="slider">
+       <h1>Carteles</h1>
+        <div class="wrapper">
+		        <div class="slider">
+			    <ul>
+				    <li><img src="imagenes/cartel01.jpg"></li>
+			    	<li><img src="imagenes/cartel02.jpg"></li>
+				    <li><img src="imagenes/cartel03.jpg"></li>
+			    	<li><img src="imagenes/cartel04.jpg"></li>
+			    	<li><img src="imagenes/cartel05.jpg"></li>
+			        </ul>
+		        </div>
+		</div>
+    </div>
+    
+    <div id="mastrabajos">
+        <h1>Otros trabajos</h1>
+        <p>&nbsp;</p>
+		    <h3><a href="https://online.fliphtml5.com/Altermex/Revistap-uuNS/" target="new">Revista AltMex</a><br><br>
+    		<a href="imagenes/calendario.pdf" target="new">Calendario 2026 Unidad Cuitláhuac</a><br><br>
+    		<a href="https://youtu.be/ec_MB7g6Lxw?si=Ei_iYubi6qkVA2vT" target="new">Ok Mañana 💜⛅ | Programa del 13 de Noviembre del 2025</a><br><br>
+            <a href="https://www.youtube.com/watch?v=N5vvI1HVH1U" target="new">Sonorización</a><br><br>
+            <a href="https://youtu.be/ufTf1ov6UKE" target="new">Mashup</a></h3>
+            <p>&nbsp;</p>
+    </div>
+</div>
+
+<script>
+    function openModal() {
+        document.getElementById("myModal").style.display = "flex";
+    }
+
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }      
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let slides = document.getElementsByClassName("mySlides");
+        let captionText = document.getElementById("caption");
+
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+        let img = slides[slideIndex - 1].getElementsByTagName("img")[0];
+        captionText.innerHTML = img.alt || "Sin descripción";
+}
+</script>
+</body>
+</html>

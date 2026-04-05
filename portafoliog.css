@@ -1,0 +1,474 @@
+* {
+    box-sizing: border-box;
+    margin: 10px;
+    
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400px;
+    font-style: normal;
+    padding: 60px;
+}
+
+.todo {
+    background-color: #ff9db9;
+    padding: 15px;
+    border-radius: 25px;
+    border: 3px solid #f65886;
+    box-shadow: 0 4px 6px rgba(212, 94, 128, 0.8);
+}
+
+header {
+    padding: 80px;
+    text-align: center;
+    background-color: white;
+    border: 3px solid #f65886 ;
+    color: #f65886;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(212, 94, 128, 0.8);
+}
+
+h1 {
+    text-align: center;
+    font-size: clamp(20px, 4vw, 40px);
+}
+
+h2 {
+    color: #0D0107;
+    font-size: clamp(18px, 4vw, 35px);
+}
+
+h3 {
+    font-size: clamp(12px, 4vw, 24px);
+}
+
+p{
+    color: #0D0107;
+    font-size: clamp(12px, 4vw, 18px);
+}
+
+nav {
+    overflow: visible;
+    position: sticky;
+    top: 10px;
+    display: flex;
+    z-index: 999;
+    flex-wrap: wrap;
+    background: linear-gradient(#ffbed1, #ff79a0 50%);
+    border: 3px solid #f65886;
+    justify-content: center;
+    border-radius: 100px;
+    box-shadow: 0 4px 6px rgba(212, 94, 128, 0.8);
+    box-sizing: border-box;
+}
+
+nav a {
+    float: left;
+    font-size: clamp(10px, 4vw, 16px);
+    color: #f65886;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background: linear-gradient(#ffffff, #ffd5e1 70%);
+    border: 3px solid #f65886;
+    border-radius: 100px;
+    box-sizing: border-box;
+}
+
+.subnav {
+    display: flex;
+    flex: 1;
+    position: relative;
+    margin: 10px;   
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    background: linear-gradient(#ffbed1, #ff79a0 70%);
+    border: 3px solid #f65886;
+    border-radius: 100px;
+    box-sizing: border-box;
+}
+
+.subnav .subnavbtn {
+    font-size: clamp(10px, 4vw, 16px);
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    text-align: center;
+    margin: 0;
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.subnav a:hover, .subnavbtn {
+    background: linear-gradient(#ffbed1, #fb6893 70%);
+    border: 1px solid #f65886;
+    border-radius: 100px;
+}
+
+nav a:hover {
+    background: linear-gradient(#ffffff, #efacc0 70%);
+    border: 3px solid #f65886;
+    border-radius: 100px;
+}
+
+/* ventana q se despliega del submenu */
+.subnav-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -10px;
+    background-color: #fff;
+    border: 3px solid #f65886;
+    border-radius: 20px;
+    width: 100%;
+    min-width: 150px;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* Style the subnav links */
+.subnav-content a {
+    display: block;
+    color: #cf456d;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.subnav-content:hover {
+    background-color: #eee;
+    color: #bb2954;
+    display: flex;
+    flex: 1;
+}
+
+.subnav:hover .subnav-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {  
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.row img{
+    box-sizing: border-box;
+}
+
+.column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 31%;
+    max-width: 31%;
+    padding: 4px;
+}
+
+.column img {
+    margin-top: 15px;
+    vertical-align: middle;
+    width: 100%;
+    border: 3px solid #f65886;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(212, 94, 128, 0.8);
+}
+
+.about {
+    background-color: #ffffff;
+    width: 97%;
+    display: block;
+    border-radius: 20px;
+    padding: 4%;
+    border: 3px solid #f65886;
+    box-shadow: 0 4px 6px rgba(212, 94, 128, 0.8);
+}
+
+.wrapper {width: 75%; height: auto; margin: 0px auto; overflow: hidden;}
+.slider, .slider * {margin: 0; padding: 0;}
+.slider {width: 100%;}
+.slider li {width: 100%; float: left;}
+.slider img {width: 100%; height: auto;}
+.slider ul {list-style-type: none; width: 500%; display: flex; animation: slider 15s infinite alternate;}
+    @keyframes slider {
+			0% {margin-left:0;}
+			20% {margin-left:0;}
+			25% {margin-left:-100%;}
+			40% {margin-left:-100%;}
+			45% {margin-left:-200%;}
+			60% {margin-left:-200%;}
+			65% {margin-left:-300%;}
+			80% {margin-left:-300%;}
+			85% {margin-left:-400%;}
+			100% {margin-left:-400%;}
+		}
+
+.modal, .modal * {margin: 0; padding: 0;}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: hsl(330, 100%, 71%, 0.9);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 100%;
+    max-width: 700px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.caption-container {
+    text-align: center;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    max-width: 50%;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 10px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: clamp(16px, 4vw, 30px);
+    transition: 0.6s ease;
+    border-radius: 3px;
+    user-select: none;
+    transform: translateY(-100%);
+    -webkit-user-select: none;
+}
+
+.prev {
+    left: -60px;
+}
+
+.next {
+    right: -60px;
+    border-radius: 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.close {
+    color: white;
+    position: absolute;
+    top: 15vh;
+    right: 23vw;
+    font-size: clamp(16px, 4vw, 30px);
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: mediumvioletred;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mySlides {
+    display: none;
+    text-align: center;
+}
+
+.mySlides img {
+    width: 90%;
+    max-height: 60vh;
+    object-fit: contain;
+}
+
+#slider {   
+    width: 30%;
+    display: inline-block;
+    background-color: #FFF0F6;
+    padding: 10px;
+    padding-bottom: 25px;
+    height: auto;
+    border-radius: 25px;
+    border: 3px solid #f65886;
+    box-shadow: 0 -4px -6px rgba(212, 94, 128, 10);
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+#mastrabajos {   
+    width: 65%;
+    display: inline-block;
+    background-color: #FFF0F6;
+    color: hotpink;
+    padding: 20px;
+    padding-bottom: 30px;
+    height: auto;
+    border-radius: 25px;
+    border: 3px solid #f65886;
+    box-shadow: 0 4px 6px rgba(212, 94, 128, 0.8);
+    box-sizing: border-box;
+    overflow: auto;
+    word-wrap: break-word;
+    font-size: clamp(12px, 4vw, 20px);
+    text-align: center;
+}
+
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: deeppink;
+    text-decoration: none;
+}
+
+a:active {
+    color: deeppink;
+    text-decoration: none;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+      }
+    
+    #slider, #mastrabajos {
+        width: 100%;
+        display: block;
+  }
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 900px) {
+    nav {
+        position: relative;
+    }
+    .row {   
+      flex-direction: column;
+  }
+    body {
+        margin: 10px;
+  }
+    
+    .prev, .next {
+        font-size: 25px;
+        padding: 8px;
+    }
+
+    .prev { 
+        left: 5px; 
+    }
+    .next { 
+        right: 5px; 
+    }
+    
+    .close {
+    top: 20vh;
+    right: 13vw;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+    
+    .mySlides img {
+    width: 75%;
+    max-height: 50vh;
+    object-fit: contain;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    
+    body {
+        margin: 3px;
+    }
+    
+    .todo{
+        margin: 3px;
+    }
+    
+    nav {
+        position: relative;
+    }
+    
+    nav a {
+        padding: 6px 8px;
+        word-wrap: break-word;
+        float: none;
+        width: 85%;
+    }
+    
+    .subnav .subnavbtn {   
+        padding: 6px 8px;
+        word-wrap: break-word;
+        float: none;
+    }
+    
+    .subnav-content a{
+        padding: 6px 8px;
+        word-wrap: break-word;
+        float: none;
+    }
+    
+    header {
+        padding: 10px;
+        
+    }
+    
+    h1 {
+        overflow: auto;
+        word-wrap: break-word;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
